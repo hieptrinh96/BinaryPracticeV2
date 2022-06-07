@@ -17,17 +17,27 @@ const binaryStringToArray = str => {
       binary8bitStr += ',';
     }
   }
-
+  // console.log(binaryStringToArray)
   return binary8bitStr.split(',');
 };
 
 const binaryToAscii = str => {
-  // Your code here
+  let letters = ''
+let arr = binaryStringToArray(str)
+for (let i = 0; i < arr.length; i++){
+let num = parseInt(arr[i])
+let string = num.toString(2)
+// let char = string.charCodeAt(i)
+let char = String.fromCharCode(string)
+console.log(char)
+letters += char
+}
+return letters
 };
 
 /******************************************************************************/
 
-console.log(binaryToAscii('011000010110001001100011'));
+console.log(binaryStringToArray('011000010110001001100011'));
 // 'abc'
 
 console.log(binaryToAscii('010000010100001001000011'));
