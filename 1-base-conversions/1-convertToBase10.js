@@ -3,8 +3,11 @@
 /******************************************************************************/
 
 const convertToBase10 = str => {
-  // Your code here
-};
+  if (str.startsWith('0b')){
+    return parseInt(str.substring(2), 2)
+  } return parseInt(str.substring(2), 16)
+  };
+  
 
 /******************************************************************************/
 
